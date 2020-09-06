@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Restaurant } from './restaurant.model'
 
 @Component({
   selector: 'app-restaurant',
@@ -7,7 +6,6 @@ import { Restaurant } from './restaurant.model'
 })
 export class RestaurantComponent implements OnInit {
 
-  restaurant: Restaurant[]
 
   constructor() { }
 

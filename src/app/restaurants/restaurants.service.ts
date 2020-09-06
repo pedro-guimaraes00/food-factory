@@ -17,7 +17,7 @@ export class RestaurantsService {
 
   constructor(private http: HttpClient) { }
 
-  getRestaurant(): Observable<Restaurant[]> {
+  getRestaurants(): Observable<Restaurant[]> {
     return this.http.get(`${FOOD_API}/restaurants`)
       .pipe(map(response => response as Restaurant[]))
   }

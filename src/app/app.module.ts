@@ -15,14 +15,14 @@ import { RestaurantComponent } from './restaurants/restaurant/restaurant.compone
     NavbarComponent,
     AboutComponent,
     RestaurantsComponent,
-    RestaurantComponent
+    RestaurantComponent,
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
-    
   ],
+  
   providers: [],
   bootstrap: [AppComponent]
 })

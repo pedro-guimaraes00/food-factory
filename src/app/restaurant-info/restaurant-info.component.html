@@ -20,7 +20,7 @@
         </div>
         <div class="card-footer">
             <div class="row">
-                <a href="#" class="col-sm">
+                <a [routerLink]="['menu']" class="col-sm">
                     <p class="text-center">Menu</p>
                 </a>
                 <a href="#" class="col-sm">
@@ -29,4 +29,8 @@
             </div>
         </div>
     </div>
+</div>
+
+<div class="row">
+    <router-outlet></router-outlet>
 </div>

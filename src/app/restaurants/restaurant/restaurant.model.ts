@@ -4,5 +4,7 @@ export class Restaurant {
   category: string
   deliveryEstimate: string
   rating: number
+  about: string
+  hours: string
   imagePath: string
 }

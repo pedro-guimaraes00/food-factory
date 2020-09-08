@@ -22,4 +22,9 @@ export class RestaurantsService {
       .pipe(map(response => response as Restaurant[]))
   }
 
+  getRestaurantById(id: string): Observable<Restaurant> {
+    return this.http.get(`${FOOD_API}/restaurants/${id}`)
+      .pipe(map(response => response as Restaurant))
+  }
+
 }

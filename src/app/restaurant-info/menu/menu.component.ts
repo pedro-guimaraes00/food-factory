@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Observable } from 'rxjs'
+import { RestaurantsService } from 'src/app/restaurants/restaurants.service';
+import { MenuItem } from '../menu-item/menu-item.model';
+
 
 @Component({
   selector: 'app-menu',
@@ -7,9 +12,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
-  constructor() { }
+  menu: Observable<MenuItem[]>
 
-  ngOnInit(): void {
+  constructor(private restaurantsService: RestaurantsService, private route: ActivatedRoute) { }
+
+  ngOnInit() {
+    this.menu = this.restaurantsService.getMenuList(this.route.parent.snapshot.params['id'])
   }
 
 }

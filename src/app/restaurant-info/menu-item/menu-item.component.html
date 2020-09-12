@@ -1,5 +1,6 @@
-<div class="card" style="width: 500px; margin-top: 20px;">
-    <p>Nome do prato</p>
-    <p>Valor</p>
-    <p>Quantidade</p>
+<div class="card">
+    <img [src]="menuItem.imagePath" class="float-left" style="width: 120px; margin-right: 40px;">
+    <p class="card-title">{{menuItem.name}}</p>
+    <p class="card-text">{{menuItem.description}}</p>
+    <p class="card-text">{{menuItem.price}}</p>
 </div>

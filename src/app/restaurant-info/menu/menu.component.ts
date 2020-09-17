@@ -8,7 +8,6 @@ import { MenuItem } from '../menu-item/menu-item.model';
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.component.html',
-  styleUrls: ['./menu.component.css']
 })
 export class MenuComponent implements OnInit {
 

@@ -66,7 +66,7 @@
       "id": "cup-cake",
       "imagePath": "assets/img/foods/cupcake.png",
       "name": "Cup Cake",
-      "description": "Cup Cake recheado de Doce de Leite",
+      "description": "O melhor Cup Cake da cidade recheado de Doce de Leite",
       "price": 8.7,
       "restaurantId": "bread-bakery"
     },
@@ -74,7 +74,7 @@
       "id": "donut",
       "imagePath": "assets/img/foods/donut.png",
       "name": "Donut",
-      "description": "Coberto com chantilly",
+      "description": "Sabores de chocolate e morango com cobertura de chantilly",
       "price": 2.5,
       "restaurantId": "bread-bakery"
     },
@@ -82,7 +82,7 @@
       "id": "bread",
       "imagePath": "assets/img/foods/bread.png",
       "name": "Pão Artesanal Italiano",
-      "description": "Pão artesanal com queijos italianos",
+      "description": "Pão integral artesanal com queijos italianos e sabor indescritível",
       "price": 15.9,
       "restaurantId": "bread-bakery"
     },
@@ -90,7 +90,7 @@
       "id": "burger",
       "imagePath": "assets/img/foods/burger.png",
       "name": "Classic Burger",
-      "description": "O clássico. Não tem como errar.",
+      "description": "O clássico: queijo, bacon, molho barbecue. Não tem como errar.",
       "price": 18.5,
       "restaurantId": "burger-house"
     },
@@ -98,7 +98,7 @@
       "id": "fries",
       "imagePath": "assets/img/foods/fries.png",
       "name": "Batatas Fritas",
-      "description": "Batatas fritas crocantes",
+      "description": "Batatas fritas especiais grandes e crocantes",
       "price": 5.5,
       "restaurantId": "burger-house"
     },
@@ -106,7 +106,7 @@
       "id": "coke.png",
       "imagePath": "assets/img/foods/coke.png",
       "name": "Refrigerante",
-      "description": "O refri mais gelado da cidade.",
+      "description": "O refri mais gelado da cidade para você se refrescar",
       "price": 4.5,
       "restaurantId": "burger-house"
     },
@@ -146,7 +146,7 @@
       "id": "greensandwich",
       "imagePath": "assets/img/foods/greensandwich.png",
       "name": "Sanduíche de Frango",
-      "description": "Frango grelhado e salada",
+      "description": "Patê de queijos, frango grelhado e salada verde temperada",
       "price": 10.5,
       "restaurantId": "green-food"
     },
@@ -154,7 +154,7 @@
       "id": "ceasar",
       "imagePath": "assets/img/foods/ceasar.png",
       "name": "Salada Ceasar",
-      "description": "Clássica salada ceasar.",
+      "description": "Clássica salada ceasar, uma explosão de sabor",
       "price": 33.9,
       "restaurantId": "green-food"
     },
@@ -186,7 +186,7 @@
       "id": "cup",
       "imagePath": "assets/img/foods/cup.png",
       "name": "Cup Cake de Choc. Branco",
-      "description": "Cup Cake de chocolate branco",
+      "description": "Cup Cake com cobertura de chocolate branco",
       "price": 5.5,
       "restaurantId": "tasty-treats"
     },
@@ -194,7 +194,7 @@
       "id": "straw",
       "imagePath": "assets/img/foods/straw.png",
       "name": "Bolo de Morango",
-      "description": "Bolo recheado e coberto com morangos",
+      "description": "Bolo recheado e coberto com calda especial de morangos",
       "price": 40.5,
       "restaurantId": "tasty-treats"
     },
@@ -202,7 +202,7 @@
       "id": "cake",
       "imagePath": "assets/img/foods/cake.png",
       "name": "Fatia de Bolo",
-      "description": "Fatia de bolo de morango",
+      "description": "Fatia de bolo de morango com cobertura de nozes",
       "price": 5.9,
       "restaurantId": "tasty-treats"
     }

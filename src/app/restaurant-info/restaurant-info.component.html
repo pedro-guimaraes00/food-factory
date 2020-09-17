@@ -1,0 +1,36 @@
+<div class="content">
+    <div class="card">
+            <div class="row">
+                <div class="col-sm">
+                    <h3 style="margin-left: 35px; margin-top: 20px">{{restaurant.name}}</h3>
+                </div>
+                <div class="col-sm">
+                    <h6 class="float-right" style="margin-right: 50px; margin-top: 25px">Avaliação: {{restaurant.rating}}</h6>
+                </div>
+            </div>
+
+        <div class="card-body">
+            <img [src]="restaurant.imagePath" class="float-left" style="width: 300px; margin-right: 20px;">
+            <h5 style="margin-top: 50px;">Categoria</h5>
+                <p>{{restaurant.category}}</p>
+            <h5>Quem somos</h5>
+               <p>{{restaurant.about}}</p>
+            <h5>Horários</h5>
+                <p>{{restaurant.hours}}</p>
+        </div>
+        <div class="card-footer">
+            <div class="row">
+                <a [routerLink]="['menu']" class="col-sm">
+                    <p class="text-center">Menu</p>
+                </a>
+                <a href="#" class="col-sm">
+                    <p class="text-center">Avaliações</p>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <router-outlet></router-outlet>
+</div>

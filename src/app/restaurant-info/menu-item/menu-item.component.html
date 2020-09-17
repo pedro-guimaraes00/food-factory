@@ -1,0 +1,21 @@
+<div class="card" style="margin-top: 20px;">
+    <div class="card-body">
+    <div class="row">
+        <div class="col">
+            <img [src]="menuItem.imagePath" class="float-left" style="width: 100px;">
+        </div>
+        <div class="col-sm-8">
+            <h5 class="card-title">{{menuItem.name}}</h5>
+            <p class="card-text">{{menuItem.description}}</p>
+            <div class="row">
+                <div class="col-sm-4">
+                    <p class="card-text">{{menuItem.price | currency: 'BRL': true}}</p>
+                </div>
+                <div class="col-sm">
+                    <a href="#" class="float-right">Adicionar</a>
+                </div>
+            </div>
+        </div>
+    </div>    
+    </div>
+</div>

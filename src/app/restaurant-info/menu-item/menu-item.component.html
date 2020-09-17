@@ -12,7 +12,7 @@
                     <p class="card-text">{{menuItem.price | currency: 'BRL': true}}</p>
                 </div>
                 <div class="col-sm">
-                    <a href="#" class="float-right">Adicionar</a>
+                    <a (click)="addEvent()" class="float-right">Adicionar</a>
                 </div>
             </div>
         </div>

@@ -28,7 +28,7 @@ export class ShoppingCartService {
   }
 
   total(): number{
-    return
+    return 
   }
 
 }

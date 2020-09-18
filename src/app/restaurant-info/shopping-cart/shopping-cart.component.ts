@@ -14,4 +14,25 @@ export class ShoppingCartComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  showItems(): any[] {
+   return this.shoppingCartService.items
+  }
+
+  clearItems() {
+    this.shoppingCartService.clearItems
+  }
+
+  increasyQt() {
+    this.shoppingCartService.increasyQt
+  }
+
+  decreasyQt() {
+    this.shoppingCartService.decreaseQt
+  }
+
+  totalValue(): number {
+    return this.shoppingCartService.total()
+  }
+
+
 }

@@ -9,6 +9,7 @@ import { MenuItem } from '../menu-item/menu-item.model';
   selector: 'app-menu',
   templateUrl: './menu.component.html',
 })
+  
 export class MenuComponent implements OnInit {
 
   menu: Observable<MenuItem[]>
@@ -17,6 +18,10 @@ export class MenuComponent implements OnInit {
 
   ngOnInit() {
     this.menu = this.restaurantsService.getMenuList(this.route.parent.snapshot.params['id'])
+  }
+
+  addMenuItem(item: MenuItem) {
+    console.log(item)
   }
 
 }

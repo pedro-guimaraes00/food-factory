@@ -40,8 +40,9 @@ export class ShoppingCartService {
   }
 
   totalValue(): number{
-    return this.items.map(item => item.value())
-        .reduce((prev, value) => prev + value, 1)
+    return this.items
+      .map(item => item.value())
+        .reduce((prev, value) => prev + value, 0)
   }
 
 }

@@ -1,31 +1,31 @@
 <div class="card" style="margin-top: 20px;">
     <div class="card-body">
         <h5>Carrinho</h5>
-        
+
         <div *ngIf="!showItems().length">
             <p style="margin-top: 40px;">Seu carrinho está vazio!</p>
             <p>Comece escollhendo alguma delícia do nosso menu :)</p>
         </div>
 
-        <table class="table-responsive" *ngIf="showItems().length">
-            <thead *ngFor="let item of showItems()"> 
+        <table class="table-responsive">
+            <tr *ngFor="let item of showItems()"> 
                 <th>({{item.quantity}}x) {{item.menuItem.name}}</th>
-            </thead>
-            <tbody>
-                <td>Aumentar qtd.</td>
-            </tbody>
+                <td>| {{item.value()| currency: 'BRL': true}}</td>
+                <td (click)="removeItem(item)">(X)</td>
+            </tr>
         </table>
     </div>
 
     <div class="card-footer" *ngIf="showItems().length">
+        <p>FRETE: R$ 10,00</p>
         <p>TOTAL: {{totalValue() | currency: 'BRL': true}}</p>
 
-        <div class="row">
+        <div class="row" *ngIf="showItems().length">
             <div class="col">
-                <h6>LIMPAR</h6>
+                <button (click)="clearItems()" class="btn btn-md btn-danger">LIMPAR</button>
             </div>
             <div class="col">
-                <button class="btn btn-sm btn-success">FECHAR PEDIDO</button>
+                <button class="btn btn-md btn-success">CONCLUIR</button>
             </div>
         </div>
     </div>

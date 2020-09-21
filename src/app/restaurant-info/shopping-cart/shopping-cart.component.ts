@@ -29,7 +29,7 @@ export class ShoppingCartComponent implements OnInit {
   }
 
   clearItems() {
-    this.shoppingCartService.clearItems
+    this.shoppingCartService.clearItems()
   }
 
   increasyQt() {

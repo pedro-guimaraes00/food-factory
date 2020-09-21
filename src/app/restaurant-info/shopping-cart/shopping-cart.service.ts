@@ -22,13 +22,26 @@ export class ShoppingCartService {
       }
   }
 
+  addItem(item: MenuItem) {
+    let foundItem = this.items.find((obj) => obj.menuItem.id === item.id)
+
+    if(foundItem) {
+      foundItem.quantity = foundItem.quantity + 1
+    }
+    
+    else {
+      this.items.push(new ShoppingCartItem(item))
+    }
+  }
+
   removeItem(item: ShoppingCartItem) {
     this.items.splice(this.items.indexOf(item),1)
 
   }
 
-  total(): number{
-    return 
+  totalValue(): number{
+    return this.items.map(item => item.value())
+        .reduce((prev, value) => prev + value, 1)
   }
 
 }

@@ -12,6 +12,8 @@ import { RestaurantInfoComponent } from './restaurant-info/restaurant-info.compo
 import { MenuComponent } from './restaurant-info/menu/menu.component';
 import { MenuItemComponent } from './restaurant-info/menu-item/menu-item.component';
 import { ShoppingCartComponent } from './restaurant-info/shopping-cart/shopping-cart.component';
+import { ShoppingCartService } from './restaurant-info/shopping-cart/shopping-cart.service';
+import { RestaurantsService } from './restaurants/restaurants.service';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,10 @@ import { ShoppingCartComponent } from './restaurant-info/shopping-cart/shopping-
     AppRoutingModule,
   ],
   
-  providers: [],
+  providers: [
+    RestaurantsService,
+    ShoppingCartService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

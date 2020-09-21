@@ -2,19 +2,23 @@
     <div class="card-body">
         <h5>Carrinho</h5>
         
-        <table class="table-responsive">
-            <thead>
-                <th>(2x) Lasanha Especial Especial Especial</th>
+        <div *ngIf="!showItems().length">
+            <p style="margin-top: 40px;">Seu carrinho está vazio!</p>
+            <p>Comece escollhendo alguma delícia do nosso menu :)</p>
+        </div>
+
+        <table class="table-responsive" *ngIf="showItems().length">
+            <thead *ngFor="let item of showItems()"> 
+                <th>({{item.quantity}}x) {{item.menuItem.name}}</th>
             </thead>
             <tbody>
                 <td>Aumentar qtd.</td>
             </tbody>
         </table>
-
-
     </div>
-    <div class="card-footer">
-        <p>The total price comes here!</p>
+
+    <div class="card-footer" *ngIf="showItems().length">
+        <p>TOTAL: {{totalValue() | currency: 'BRL': true}}</p>
 
         <div class="row">
             <div class="col">

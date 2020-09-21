@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ShoppingCartService } from './shopping-cart.service' 
+import { ShoppingCartService } from './shopping-cart.service'
+import { MenuItem } from '../menu-item/menu-item.model'
 
 @Component({
   selector: 'app-shopping-cart',
@@ -31,7 +32,7 @@ export class ShoppingCartComponent implements OnInit {
   }
 
   totalValue(): number {
-    return this.shoppingCartService.total()
+    return this.shoppingCartService.totalValue()
   }
 
 

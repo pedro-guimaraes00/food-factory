@@ -2,10 +2,10 @@
 
     <div class="col">
         <div class="col-md-9 col-xs-12">
-            <app-menu-item *ngFor="let item of menu | async" [menuItem]="item" (add)="addMenuItem($event)"></app-menu-item>
+            <app-menu-item *ngFor="let item of menu | async" [menuItem]="item" (add)="shoppingCart.addMenuItem($event)"></app-menu-item>
         </div>
     </div>
 
-    <app-shopping-cart></app-shopping-cart>
+    <app-shopping-cart #shoppingCart></app-shopping-cart>
 
 </div>

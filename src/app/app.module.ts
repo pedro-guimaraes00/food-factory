@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http'
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,6 +12,9 @@ import { RestaurantComponent } from './restaurants/restaurant/restaurant.compone
 import { RestaurantInfoComponent } from './restaurant-info/restaurant-info.component';
 import { MenuComponent } from './restaurant-info/menu/menu.component';
 import { MenuItemComponent } from './restaurant-info/menu-item/menu-item.component';
+import { ShoppingCartComponent } from './restaurant-info/shopping-cart/shopping-cart.component';
+import { ShoppingCartService } from './restaurant-info/shopping-cart/shopping-cart.service';
+import { RestaurantsService } from './restaurants/restaurants.service';
 
 @NgModule({
   declarations: [
@@ -22,14 +26,19 @@ import { MenuItemComponent } from './restaurant-info/menu-item/menu-item.compone
     RestaurantInfoComponent,
     MenuComponent,
     MenuItemComponent,
+    ShoppingCartComponent,
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
   ],
   
-  providers: [],
+  providers: [
+    RestaurantsService,
+    ShoppingCartService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

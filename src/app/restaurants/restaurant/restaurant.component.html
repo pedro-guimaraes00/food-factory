@@ -1,5 +1,5 @@
 <a [routerLink]="['/restaurants', restaurant.id]">
-    <div class="card">
+    <div class="card" [@showRestaurants] = 'restaurantState'>
         <div class="card-body">
             <img [src]="restaurant.imagePath" class="float-left" style="width: 120px; margin-right: 40px;">
             <div class="float-right"><img src="assets/icons/star.svg" style="width: 20px;margin-top: -6px"> {{restaurant.rating}}</div>

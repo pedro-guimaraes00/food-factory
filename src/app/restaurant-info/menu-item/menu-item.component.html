@@ -12,7 +12,8 @@
                     <p class="card-text">{{menuItem.price | currency: 'BRL': true}}</p>
                 </div>
                 <div class="col-sm">
-                    <a (click)="addEvent()" class="float-right">Adicionar</a>
+                    <a (click)="addEvent()" class="float-right text-primary">
+                        <img src="assets/icons/plus-circle.svg" style="margin-top: -5px;"> Adicionar</a>
                 </div>
             </div>
         </div>

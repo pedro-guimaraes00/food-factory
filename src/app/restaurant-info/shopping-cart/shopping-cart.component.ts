@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ShoppingCartService } from './shopping-cart.service'
 import { trigger, state, style, transition, animate, keyframes } from '@angular/animations'
-import { MenuItem } from '../menu-item/menu-item.model'
-import { ShoppingCartItem } from './shopping-cart.model';
 
 @Component({
   selector: 'app-shopping-cart',

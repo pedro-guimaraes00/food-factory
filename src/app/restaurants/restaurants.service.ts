@@ -3,7 +3,6 @@ import { HttpClient } from '@angular/common/http'
 import { FOOD_API } from '../app.api'
 import { Observable } from 'rxjs'
 import { map } from 'rxjs/operators'
-import { catchError } from 'rxjs/operators'
 
 import { Restaurant } from './restaurant/restaurant.model'
 import { MenuItem } from '../restaurant-info/menu-item/menu-item.model'

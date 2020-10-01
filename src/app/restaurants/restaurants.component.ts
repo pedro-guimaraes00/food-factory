@@ -4,7 +4,7 @@ import { RestaurantsService } from './restaurants.service'
 
 import { trigger, state, style, transition, animate } from '@angular/animations'
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms'
-import { switchMap } from 'rxjs/operators'
+import { switchMap, tap, debounceTime } from 'rxjs/operators'
 
 
 @Component({
@@ -48,8 +48,10 @@ export class RestaurantsComponent implements OnInit {
     })
 
     this.searchControl.valueChanges
-      .pipe(switchMap(searchTerm => this.restaurantsService.searchRestaurants(searchTerm)))
-      .subscribe(restaurants => this.restaurants = restaurants);
+      .pipe(debounceTime(500))
+        .pipe(tap(searchTerm => console.log(`q=${searchTerm}`)))
+          .pipe(switchMap(searchTerm => this.restaurantsService.searchRestaurants(searchTerm)))
+              .subscribe(restaurants => this.restaurants = restaurants);
 
 
     this.restaurantsService.getRestaurants()

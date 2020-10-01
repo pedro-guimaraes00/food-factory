@@ -32,4 +32,9 @@ export class RestaurantsService {
       .pipe(map(response => response as MenuItem[]))
   }
 
+  searchRestaurants(search?: string): Observable<Restaurant[]> {
+    return this.http.get(`${FOOD_API}/restaurants`, {params: {q: search}})
+      .pipe(map(response => response as Restaurant[]))
+  }
+
 }

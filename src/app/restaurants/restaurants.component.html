@@ -1,8 +1,26 @@
 <section class="title">
-        <h4>
-            <img src="assets/icons/house.svg" style="width: 30px; margin-top: -10px;margin-right: 15px;">
-             Todos os restaurantes
-        </h4>
+        <div class="row">
+            <div class="col-8">
+                <h4>
+                    <img src="assets/icons/house.svg" style="width: 30px; margin-top: -10px;margin-right: 15px;">
+                     Todos os restaurantes
+                </h4>
+            </div>
+            <div class="col" [@searchToogle]="searchState">
+                <form [formGroup]="searchForm">
+                    <div class="form-group">
+                        <input type="text" formControlName="searchControl" class="form-control" placeholder="O que você procura?" style="margin-top: -20px;">
+                    </div>
+                </form>
+            </div>
+            <div class="col-1">
+                <a (click)="searchToogle()">
+                    <img src="assets/icons/search.svg" class="float-right" style="width: 20px;margin-top: 10px;margin-right: 10px">
+                </a> 
+            </div>
+        </div>
+
+
 </section>
 
 <div class="content">

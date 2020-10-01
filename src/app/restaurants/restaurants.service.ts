@@ -3,7 +3,6 @@ import { HttpClient } from '@angular/common/http'
 import { FOOD_API } from '../app.api'
 import { Observable } from 'rxjs'
 import { map } from 'rxjs/operators'
-import { catchError } from 'rxjs/operators'
 
 import { Restaurant } from './restaurant/restaurant.model'
 import { MenuItem } from '../restaurant-info/menu-item/menu-item.model'
@@ -30,6 +29,11 @@ export class RestaurantsService {
   getMenuList(id: string): Observable<MenuItem[]> {
     return this.http.get(`${FOOD_API}/restaurants/${id}/menu`)
       .pipe(map(response => response as MenuItem[]))
+  }
+
+  searchRestaurants(search?: string): Observable<Restaurant[]> {
+    return this.http.get(`${FOOD_API}/restaurants`, {params: {q: search}})
+      .pipe(map(response => response as Restaurant[]))
   }
 
 }

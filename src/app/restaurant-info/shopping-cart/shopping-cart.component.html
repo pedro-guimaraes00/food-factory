@@ -1,13 +1,13 @@
-<div class="card" style="margin-top: 20px;">
+<div class="card" style="margin-top: 20px;" [@showCart]="cartState">
     <div class="card-body">
         <h5>
             <img src="assets/icons/cart3.svg" style="width: 20px;margin-top: -5px">
              Carrinho
         </h5>
 
-        <div *ngIf="!showItems().length">
+        <div *ngIf="!showItems().length" [@showCart]="cartState">
             <p style="margin-top: 40px;">Seu carrinho está vazio!</p>
-            <p>Comece escollhendo alguma delícia do nosso menu :)</p>
+            <p>Comece escollhendo alguma delícia do nosso menu! :)</p>
         </div>
 
         <table class="table-responsive">

@@ -49,8 +49,7 @@ export class RestaurantsComponent implements OnInit {
 
     this.searchControl.valueChanges
       .pipe(debounceTime(500))
-        .pipe(tap(searchTerm => console.log(`q=${searchTerm}`)))
-          .pipe(switchMap(searchTerm => this.restaurantsService.searchRestaurants(searchTerm)))
+        .pipe(switchMap(searchTerm => this.restaurantsService.searchRestaurants(searchTerm)))
               .subscribe(restaurants => this.restaurants = restaurants);
 
 

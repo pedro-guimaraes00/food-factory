@@ -4,6 +4,7 @@ import { AboutComponent } from './about/about.component'
 import { RestaurantInfoComponent } from './restaurant-info/restaurant-info.component';
 import { RestaurantsComponent } from './restaurants/restaurants.component'
 import { MenuComponent } from './restaurant-info/menu/menu.component'
+import { OrderComponent } from './order/order.component';
 
 
 
@@ -16,6 +17,7 @@ const routes: Routes = [
       
       { path: 'menu', component: MenuComponent }
   ]},
+  { path: 'order', component: OrderComponent }
 
 ];
 

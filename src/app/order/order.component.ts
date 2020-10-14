@@ -1,11 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { MenuItem } from '../restaurant-info/menu-item/menu-item.model';
+import { ShoppingCartItem } from '../restaurant-info/shopping-cart/shopping-cart.model';
 import { OrderService } from './order.service';
 
 @Component({
   selector: 'app-order',
   templateUrl: './order.component.html',
 })
+  
 export class OrderComponent implements OnInit {
 
   formOrder: FormGroup
@@ -29,5 +32,30 @@ export class OrderComponent implements OnInit {
   onSubmit() {
     console.log(this.formOrder.value);
   }
+
+  clearItems() {
+    this.orderService.clearItems()
+  }
+
+  increaseQt(item: ShoppingCartItem) {
+    this.orderService.increaseQt(item)
+  }
+
+  decreaseQt(item: ShoppingCartItem) {
+    this.orderService.decreaseQt(item)
+  }
+
+  addItem(item: MenuItem) {
+    this.orderService.addItem(item)
+  }
+
+  removeItem(item: ShoppingCartItem) {
+    this.orderService.removeItem(item)
+  }
+
+  totalValue(): number {
+    return this.orderService.totalValue()
+  }
+
 
 }

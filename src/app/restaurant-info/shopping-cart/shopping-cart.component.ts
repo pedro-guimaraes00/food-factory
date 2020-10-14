@@ -54,11 +54,11 @@ export class ShoppingCartComponent implements OnInit {
     this.shoppingCartService.clearItems()
   }
 
-  increasyQt() {
-    this.shoppingCartService.increasyQt
+  increaseQt() {
+    this.shoppingCartService.increaseQt
   }
 
-  decreasyQt() {
+  decreaseQt() {
     this.shoppingCartService.decreaseQt
   }
 

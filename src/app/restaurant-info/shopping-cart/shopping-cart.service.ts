@@ -11,7 +11,7 @@ export class ShoppingCartService {
       this.items = []
   }
 
-  increasyQt(item: ShoppingCartItem) {
+  increaseQt(item: ShoppingCartItem) {
       item.quantity = item.quantity + 1
   }
 

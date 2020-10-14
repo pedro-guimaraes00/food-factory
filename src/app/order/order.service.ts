@@ -14,8 +14,8 @@ export class OrderService {
     this.shoppingCartService.clearItems();
   }
 
-  increasyQt(item: ShoppingCartItem) {
-    this.shoppingCartService.increasyQt(item);
+  increaseQt(item: ShoppingCartItem) {
+    this.shoppingCartService.increaseQt(item);
   }
 
   decreaseQt(item: ShoppingCartItem) {

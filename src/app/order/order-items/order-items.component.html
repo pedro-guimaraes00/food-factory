@@ -9,14 +9,14 @@
     <tbody>
         <tr>
             <td>
-                2(x)
+                {{item.quantity}}
             </td>
-            <td>Hambúger Classico</td>
-            <td>O clássico da casa!</td>
-            <td>R$ 35,00</td>
+            <td>{{item.name}}</td>
+            <td>{{item.description}}</td>
+            <td>{{item.price}}</td>
             <td>
-                <img src="assets/icons/plus-circle.svg" style="width:15px;margin-right:10px">
-                <img src="assets/icons/dash-circle.svg" style="width:15px">
+                <img src="assets/icons/plus-circle.svg" (click)="increaseQt()" style="width:15px;margin-right:10px">
+                <img src="assets/icons/dash-circle.svg" (click)="decreaseQt()" style="width:15px">
             </td>    
         </tr>
     </tbody>

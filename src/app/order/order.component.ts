@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ShoppingCartService } from '../restaurant-info/shopping-cart/shopping-cart.service';
-import { ShoppingCartItem } from '../restaurant-info/shopping-cart/shopping-cart.model'
-import { FormBuilder, FormGroup, Validators} from '@angular/forms'
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { OrderService } from './order.service';
 
 @Component({
   selector: 'app-order',
@@ -11,7 +10,7 @@ export class OrderComponent implements OnInit {
 
   formOrder: FormGroup
 
-  constructor(private shoppingCart: ShoppingCartService, private formBuilder: FormBuilder) { }
+  constructor(private orderService: OrderService, private formBuilder: FormBuilder) { }
 
   ngOnInit(): void {
 
@@ -25,6 +24,10 @@ export class OrderComponent implements OnInit {
 
     })
     
+  }
+
+  onSubmit() {
+    console.log(this.formOrder.value);
   }
 
 }

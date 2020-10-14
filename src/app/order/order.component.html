@@ -1,29 +1,29 @@
 <section style="margin-bottom: 60px">
     <h4 style="margin-bottom: 20px">Concluir pedido</h4>
 
-    <form [formGroup]="formOrder" class="form-group">
+    <form [formGroup]="formOrder" class="form-group" (ngSubmit)="onSubmit()">
         
         <div class="row" style="margin-bottom: 20px;">
             <div class="col-md-6">
-                <input type="text" class="form-control" formControlName="endereco" placeholder="Endereço">
+                <input type="text" class="form-control" name="endereco" formControlName="endereco" placeholder="Endereço">
             </div>
             <div class="col-md-3">
-                <input type="text" class="form-control" formControlName="numero" placeholder="Número">
+                <input type="text" class="form-control" name="numero" formControlName="numero" placeholder="Número">
             </div>
             <div class="col-md-3">
-                <input type="text" class="form-control" formControlName="complemento" placeholder="Complemento">
+                <input type="text" class="form-control" name="complemento" formControlName="complemento" placeholder="Complemento">
             </div>
         </div>
 
         <div class="row">
             <div class="col-md-6">
-                <input type="text" class="form-control" formControlName="nome" placeholder="Nome completo">
+                <input type="text" class="form-control" name="nome" formControlName="nome" placeholder="Nome completo">
             </div>
             <div class="col-md-3">
-                <input type="text" class="form-control" formControlName="email" placeholder="E-mail">
+                <input type="text" class="form-control" name="email" formControlName="email" placeholder="E-mail">
             </div>
             <div class="col-md-3">
-                <input type="text" class="form-control" formControlName="celular" placeholder="Celular">
+                <input type="text" class="form-control" name="celular" formControlName="celular" placeholder="Celular">
             </div>
         </div>
 
@@ -31,29 +31,7 @@
 
 </section>
 
-<table class="table table-striped">
-    <thead>
-        <th>Quantidade</th>
-        <th>Produto</th>
-        <th>Descrição</th>
-        <th>Subtotal</th>
-        <th></th>
-    </thead>
-    <tbody>
-        <tr>
-            <td>
-                2(x)
-            </td>
-            <td>Hambúger Classico</td>
-            <td>O clássico da casa!</td>
-            <td>R$ 35,00</td>
-            <td>
-                <img src="assets/icons/plus-circle.svg" style="width:15px;margin-right:10px">
-                <img src="assets/icons/dash-circle.svg" style="width:15px">
-            </td>    
-        </tr>
-    </tbody>
-</table>
+<app-order-items></app-order-items>
 
 
 <div class="row">

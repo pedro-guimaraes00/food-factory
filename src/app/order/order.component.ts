@@ -11,6 +11,8 @@ import { OrderService } from './order.service';
   
 export class OrderComponent implements OnInit {
 
+  delivery: number = 20
+
   formOrder: FormGroup
 
   constructor(private orderService: OrderService, private formBuilder: FormBuilder) { }

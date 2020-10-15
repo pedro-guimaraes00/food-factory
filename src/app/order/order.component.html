@@ -1,6 +1,7 @@
 <section style="margin-bottom: 60px">
-    <h4 style="margin-bottom: 20px">Concluir pedido</h4>
+    <h3 style="margin-bottom: 40px">Concluir pedido</h3>
 
+    <h5>Dados da entrega:</h5>
     <form [formGroup]="formOrder" class="form-group" (ngSubmit)="onSubmit()">
         
         <div class="row" style="margin-bottom: 20px;">
@@ -31,55 +32,19 @@
 
 </section>
 
+<h5>Seu carrinho:</h5>
 <app-order-items [items]="shoppingCartItems()" (increaseQt)="increaseQt($event)" (decreaseQt)="decreaseQt($event)"></app-order-items>
 
 
 <div class="row">
     <div class="col-md-6" style="margin-top: 60px">
             
-        <h6>Formas de pagamento:</h6>
-            <div class="form-check" style="margin-top:40px">
-                <input class="form-check-input" type="radio" name="exampleRadios" value="option1">
-                Dinheiro
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="exampleRadios" value="option2">
-                Cartão de Débito
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="exampleRadios" value="option2">
-                Cartão de Crédito
-            </div>
+        <app-payment-options></app-payment-options>
+
     </div>
-
     <div class="col-md-6" style="margin-top: 60px">
-        <h6>Frete + Total: </h6>
-            <table class="table">
-                <tbody>
-                  <tr>
-                    <th style="width:50%">Itens:</th>
-                    <td class="text-right">Hambúger Classico</td>
-                  </tr>
-                  <tr>
-                    <th>Frete:</th>
-                    <td class="text-right">R$ 20,00</td>
-                  </tr>
-                  <tr>
-                    <th>Total:</th>
-                    <td class="text-right">R$ 55,00</td>
-                  </tr>
-                  <tr>
-                  </tr>
-                </tbody>
-            </table>
+        
+        <app-delivery-costs [delivery]="delivery" [itemValue]="totalValue()"></app-delivery-costs>
 
-            <div class="row">
-                <div class="col">
-                    <button class="btn btn-md btn-success">
-                        <img src="assets/icons/credit-card.svg" style="margin-right:10px;width: 20px">
-                            Concluir pedido
-                    </button>
-                </div>
-            </div>
     </div>
 </div>

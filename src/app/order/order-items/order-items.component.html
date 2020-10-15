@@ -1,23 +1,26 @@
-<table class="table table-striped">
+<div *ngIf="!items" class="card" style="width:400px">
+    <p style="margin: 20px">Não há itens no seu carrinho!</p>
+    <p style="margin: 20px">Comece escollhendo alguma delícia do nosso menu! :)</p>
+</div>
+
+
+<table *ngIf="items" class="table table-striped">
     <thead>
         <th>Quantidade</th>
         <th>Produto</th>
         <th>Descrição</th>
         <th>Subtotal</th>
-        <th></th>
     </thead>
     <tbody>
-        <tr>
+        <tr *ngFor="let item of items">
             <td>
-                {{item.quantity}}
+                <img src="assets/icons/plus-circle.svg" (click)="emitIncreaseQt(item)" style="width:15px;margin-right:10px">
+                    {{item.quantity}}x
+                <img src="assets/icons/dash-circle.svg" (click)="emitDecreaseQt(item)" style="width:15px;margin-left:11px;">
             </td>
-            <td>{{item.name}}</td>
-            <td>{{item.description}}</td>
-            <td>{{item.price}}</td>
-            <td>
-                <img src="assets/icons/plus-circle.svg" (click)="increaseQt()" style="width:15px;margin-right:10px">
-                <img src="assets/icons/dash-circle.svg" (click)="decreaseQt()" style="width:15px">
-            </td>    
+            <td>{{item.menuItem.name}}</td>
+            <td>{{item.menuItem.description}}</td>
+            <td>{{item.value() | currency: 'BRL': true}}</td>
         </tr>
     </tbody>
 </table>

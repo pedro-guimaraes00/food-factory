@@ -26,12 +26,15 @@ export class OrderComponent implements OnInit {
       celular: this.formBuilder.control('', [Validators.required]),
 
     })
-    
   }
 
   onSubmit() {
     console.log(this.formOrder.value);
   }
+
+  shoppingCartItems(): any[] {
+    return this.orderService.shoppingCartItems()
+   }
 
   clearItems() {
     this.orderService.clearItems()

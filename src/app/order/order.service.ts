@@ -10,6 +10,10 @@ export class OrderService {
 
   constructor(private shoppingCartService: ShoppingCartService) { }
   
+  shoppingCartItems(): ShoppingCartItem[] {
+    return this.shoppingCartService.items
+  }
+  
   clearItems() {
     this.shoppingCartService.clearItems();
   }

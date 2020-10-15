@@ -20,15 +20,22 @@
     </div>
 
     <div class="card-footer" *ngIf="showItems().length">
-        <p>FRETE: R$ 10,00</p>
-        <p>TOTAL: {{totalValue() | currency: 'BRL': true}}</p>
+        <tr>
+            <th style="width:50%">Valor do frete:</th>
+            <td class="text-right">{{delivery | currency: 'BRL': true}}</td>
+        </tr>
+        <tr>
+            <th>Itens selecionados:</th>
+            <td class="text-right">{{totalValue() | currency: 'BRL': true}}</td>
+        </tr>
 
-        <div class="row" *ngIf="showItems().length">
-            <div class="col">
+        <div class="row" style="margin-top:20px" *ngIf="showItems().length">
+            <div class="col-md-5"></div>
+            <div class="col-md-3">
                 <button (click)="clearItems()" class="btn btn-md btn-danger">LIMPAR</button>
             </div>
-            <div class="col">
-                <button [routerLink]="['/order']" class="btn btn-md btn-success">CONCLUIR</button>
+            <div class="col-md-4">
+                <button [routerLink]="['/order']" class="btn btn-md btn-success">PRÓXIMO</button>
             </div>
         </div>
     </div>

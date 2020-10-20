@@ -5,11 +5,13 @@ import { RestaurantInfoComponent } from './restaurant-info/restaurant-info.compo
 import { RestaurantsComponent } from './restaurants/restaurants.component'
 import { MenuComponent } from './restaurant-info/menu/menu.component'
 import { OrderComponent } from './order/order.component';
+import { MainComponent } from './main/main.component';
 
 
 
 const routes: Routes = [
 
+  { path: '', component: MainComponent},
   { path: 'about', component: AboutComponent },
   { path: 'restaurants', component: RestaurantsComponent },
   {

@@ -30,8 +30,9 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
 export class ShoppingCartComponent implements OnInit {
 
   rowState = 'ready'
-
   cartState = 'ready'
+
+  delivery: number = 20
 
   constructor( private shoppingCartService: ShoppingCartService) { }
 
@@ -54,11 +55,11 @@ export class ShoppingCartComponent implements OnInit {
     this.shoppingCartService.clearItems()
   }
 
-  increasyQt() {
-    this.shoppingCartService.increasyQt
+  increaseQt() {
+    this.shoppingCartService.increaseQt
   }
 
-  decreasyQt() {
+  decreaseQt() {
     this.shoppingCartService.decreaseQt
   }
 

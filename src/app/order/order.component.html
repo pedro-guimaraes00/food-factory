@@ -1,1 +1,50 @@
-<p>order works!</p>
+<section style="margin-bottom: 60px">
+    <h3 style="margin-bottom: 40px">Concluir pedido</h3>
+
+    <h5>Dados da entrega:</h5>
+    <form [formGroup]="formOrder" class="form-group" (ngSubmit)="onSubmit()">
+        
+        <div class="row" style="margin-bottom: 20px;">
+            <div class="col-md-6">
+                <input type="text" class="form-control" name="endereco" formControlName="endereco" placeholder="Endereço">
+            </div>
+            <div class="col-md-3">
+                <input type="text" class="form-control" name="numero" formControlName="numero" placeholder="Número">
+            </div>
+            <div class="col-md-3">
+                <input type="text" class="form-control" name="complemento" formControlName="complemento" placeholder="Complemento">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <input type="text" class="form-control" name="nome" formControlName="nome" placeholder="Nome completo">
+            </div>
+            <div class="col-md-3">
+                <input type="text" class="form-control" name="email" formControlName="email" placeholder="E-mail">
+            </div>
+            <div class="col-md-3">
+                <input type="text" class="form-control" name="celular" formControlName="celular" placeholder="Celular">
+            </div>
+        </div>
+
+    </form>
+
+</section>
+
+<h5>Seu carrinho:</h5>
+<app-order-items [items]="shoppingCartItems()" (increaseQt)="increaseQt($event)" (decreaseQt)="decreaseQt($event)"></app-order-items>
+
+
+<div class="row">
+    <div class="col-md-6" style="margin-top: 60px">
+            
+        <app-payment-options></app-payment-options>
+
+    </div>
+    <div class="col-md-6" style="margin-top: 60px">
+        
+        <app-delivery-costs [delivery]="delivery" [itemValue]="totalValue()"></app-delivery-costs>
+
+    </div>
+</div>

@@ -21,6 +21,7 @@ import { OrderComponent } from './order/order.component';
 import { OrderItemsComponent } from './order/order-items/order-items.component';
 import { PaymentOptionsComponent } from './order/payment-options/payment-options.component';
 import { DeliveryCostsComponent } from './order/delivery-costs/delivery-costs.component';
+import { MainComponent } from './main/main.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { DeliveryCostsComponent } from './order/delivery-costs/delivery-costs.co
     OrderItemsComponent,
     PaymentOptionsComponent,
     DeliveryCostsComponent,
+    MainComponent,
   ],
   imports: [
     BrowserModule,
